@@ -14,24 +14,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function submitRamen(event){
     event.preventDefault()
+    //debugger
     let ramenObj = {
         name: event.target.name.value,
         restaurant: event.target.restaurant.value,
         image: event.target.image.value,
         rating: event.target.rating.value,
-        comment: event.target.comment.value
+        comment: document.querySelector('textarea').value
     }
     addRamenPhoto(ramenObj)
     postRamen(ramenObj)
 }
 
-function postRamen(ramenData){
-    fetch(`http://localhost:3000/ramens/${ramenObj.id}`, {
-        method: 'PATCH',
+function postRamen(ramenObj){
+    fetch(`http://localhost:3000/ramens`, {
+        method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(ramenData)
+        body: JSON.stringify(ramenObj)
     })
     .then(res => res.json())
     .then(ramenData => console.log(ramenData))

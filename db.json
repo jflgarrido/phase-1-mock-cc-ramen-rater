@@ -39,6 +39,14 @@
       "image": "./assets/ramen/kojiro.jpg",
       "rating": 6,
       "comment": "Perfect for a cold night."
+    },
+    {
+      "name": "Ghost Fighter Ramen",
+      "restaurant": "Yu-yu Hakusho",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6zIiUn0qyy-_8bYExZ6-bWrPN36mk0MWksA&usqp=CAU",
+      "rating": "6",
+      "comment": "gREAT!",
+      "id": 6
     }
   ]
 }
